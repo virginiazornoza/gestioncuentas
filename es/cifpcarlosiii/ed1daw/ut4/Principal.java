@@ -1,0 +1,60 @@
+package gestioncuentas.es.cifpcarlosiii.ed1daw.ut4;
+
+public class Principal {
+
+    public static void main(String[] args) {
+
+        /**
+         * Clase que ejecuta las demas de forma conjunta, tiene un metodo de ingreso y otro de retirada,
+         * cuenta con funciones como comision o interes.
+         * @author Daniel Pérez MOreno
+         * @param Cuenta
+         * @version 1.1
+         */
+        Cuenta cuenta = new Cuenta("Ana López");
+        cuenta.ingresar(100);
+        cuenta.retirar(50);
+
+        double total = cuenta.calcularSaldoFinal();
+
+        cuenta.setSaldo(500);
+
+        CuentaAhorro cuentaAhorro = new CuentaAhorro();
+        cuentaAhorro.setTitular("Pedro Gómez");
+        cuentaAhorro.setSaldo(1000);
+
+        CuentaCorriente cc = new CuentaCorriente();
+        cc.setTitular("Ana López");
+        cc.setSaldo(800);
+
+        // Operaciones hechas directamente sobre el saldo (mal diseño intencionado)
+
+        cuenta.setSaldo(cuenta.getSaldo() + 200 - 50);
+
+        cuentaAhorro.setSaldo(cuentaAhorro.getSaldo() + 300);
+        cuentaAhorro.aplicarInteres();
+
+        cc.setSaldo(cc.getSaldo() - 100);
+        cc.aplicarComision();
+
+        System.out.println("---- Cuenta normal ----");
+        cuenta.mostrarDatos();
+
+        System.out.println("---- Cuenta ahorro ----");
+        cuentaAhorro.mostrarDatos();
+
+        System.out.println("---- Cuenta corriente ----");
+        cc.mostrarDatos();
+
+    }
+    public void ingresar(double cantidad) {
+        saldo += cantidad;
+    }
+    public void retirar(double cantidad){
+        saldo -= cantidad;
+    }
+    public double calcularSaldoFinal(){
+        return saldo;
+    }
+
+}
