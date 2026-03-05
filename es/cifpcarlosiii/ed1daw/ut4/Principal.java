@@ -4,6 +4,13 @@ public class Principal {
 
     public static void main(String[] args) {
 
+        /**
+         * Clase que ejecuta las demas de forma conjunta, tiene un metodo de ingreso y otro de retirada,
+         * cuenta con funciones como comision o interes.
+         * @author Daniel Pérez MOreno
+         * @param Cuenta
+         * @version 1.1
+         */
         Cuenta cuenta = new Cuenta("Ana López");
         cuenta.ingresar(100);
         cuenta.retirar(50);

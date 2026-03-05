@@ -1,6 +1,15 @@
 package gestioncuentas.es.cifpcarlosiii.ed1daw.ut4;
 
 public class Cuenta {
+    /**
+     * Clase que sirve para crear una cuenta con un titular y un saldo, con un metodo para
+     * mostrar los datos de la cuenta y otro para retirar de forma controlada
+     * @author Daniel Perez Moreno
+     * @param titular
+     * @version 1.1
+     */
+
+
     public Cuenta(String titular) {
         this.titular = titular;
     }
