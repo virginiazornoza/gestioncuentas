@@ -2,13 +2,21 @@ package gestioncuentas;
 
 public class CuentaCorriente extends Cuenta {
 
-    public double comision;
+    private double comision;
 
     public CuentaCorriente() {
         comision = 2.0;
     }
 
     public void aplicarComision() {
-        saldo = saldo - comision;
+        setSaldo(getSaldo() - comision);
+    }
+
+    private double getComision() {
+        return comision;
+    }
+
+    private void setComision(double comision) {
+        this.comision = comision;
     }
 }

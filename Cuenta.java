@@ -2,8 +2,8 @@ package gestioncuentas;
 
 public class Cuenta {
 
-    public String titular;
-    public double saldo;
+    private String titular;
+    private double saldo;
 
     public Cuenta() {
         saldo = 0;
@@ -21,5 +21,25 @@ public class Cuenta {
         } else {
             return false;
         }
+    }
+
+    public Cuenta(String titular) {
+        this.titular = titular;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 }
