@@ -1,5 +1,9 @@
 package gestioncuentas;
-
+/**
+ * Clase principal que crea y manipula objetos de tipo Cuenta, CuentaAhorro y CuentaCorriente.
+ * author: Pedro Viñals
+ * version: 1.2
+ */
 public class Principal {
 
     public static void main(String[] args) {
